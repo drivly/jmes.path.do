@@ -1,10 +1,10 @@
-import { JSONPath } from 'jsonpath-plus'
+import jmespath from 'jmespath'
 
 export default {
   fetch: async req => {
     const { pathname, search } = new URL(req.url)
     const [_, path, ...target] = pathname.split('/')
     const json = await fetch('https://' + target.join('/') + search, req).then(res => res.json())
-    return new Response(JSON.stringify(JSONPath({path, json, preventEval: true}), null, 2), { headers: { 'content-type': 'application/json' }})
+    return new Response(JSON.stringify(jmespath.search({json, path}), null, 2), { headers: { 'content-type': 'application/json' }})
   }
 }
