@@ -1,6 +1,6 @@
-# json.path.do
+# jmes.path.do
 
-Dynamic JSON Path Transformations
+Dynamic JMESPath Transformations
 
 <https://json.fyi/books.json>
 ```json
