@@ -16,7 +16,7 @@ Dynamic JMESPath Transformations
 
 The authors of all books in the store: `locations[?state == 'WA'].name | sort(@) | {WashingtonCities: join(', ', @)}`
 
-[https://jmes.path.do/locations[?state==`WA`].name|sort(@)|{WashingtonCities:join(`,`,@)}/json.fyi/locations.json](https://jmes.path.do/locations[?state=='WA'].name|sort(@)|{WashingtonCities:join(`,`,@)}/json.fyi/locations.json)
+[https://jmes.path.do/locations[?state=='WA'].name|sort(@)|{WashingtonCities:join(', ',@)}/json.fyi/locations.json](https://jmes.path.do/locations[?state=='WA'].name|sort(@)|{WashingtonCities:join(`, `,@)}/json.fyi/locations.json)
 
 ```json
 {
