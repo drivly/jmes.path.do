@@ -75,13 +75,17 @@ Get the name and first tag of all people: `people[*].{name: name, tags: tags[0]}
 
 ```json
 [
-  [
-    "Fred",
-    25
-  ],
-  [
-    "George",
-    30
-  ]
+  {
+    "name": "Bob",
+    "tags": "a"
+  },
+  {
+    "name": "Fred",
+    "tags": "d"
+  },
+  {
+    "name": "George",
+    "tags": "g"
+  }
 ]
 ```
