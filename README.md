@@ -2,49 +2,21 @@
 
 Dynamic JMESPath Transformations
 
-<https://json.fyi/books.json>
+<https://json.fyi/locations.json>
 ```json
 {
-  "store": {
-    "book": [
-      {
-        "category": "reference",
-        "author": "Nigel Rees",
-        "title": "Sayings of the Century",
-        "price": 8.95
-      },
-      {
-        "category": "fiction",
-        "author": "Evelyn Waugh",
-        "title": "Sword of Honour",
-        "price": 12.99
-      },
-      {
-        "category": "fiction",
-        "author": "Herman Melville",
-        "title": "Moby Dick",
-        "isbn": "0-553-21311-3",
-        "price": 8.99
-      },
-      {
-        "category": "fiction",
-        "author": "J. R. R. Tolkien",
-        "title": "The Lord of the Rings",
-        "isbn": "0-395-19395-8",
-        "price": 22.99
-      }
-    ],
-    "bicycle": {
-      "color": "red",
-      "price": 19.95
-    }
-  }
+  "locations": [
+    {"name": "Seattle", "state": "WA"},
+    {"name": "New York", "state": "NY"},
+    {"name": "Bellevue", "state": "WA"},
+    {"name": "Olympia", "state": "WA"}
+  ]
 }
 ```
 
-The authors of all books in the store: `$.store.book[*].author`
+The authors of all books in the store: `locations[?state == 'WA'].name | sort(@) | {WashingtonCities: join(', ', @)}`
 
-<https://json.path.do/$.store.book[*].author/json.fyi/books.json>
+<https://jmes.path.do/locations[?state == 'WA'].name | sort(@) | {WashingtonCities: join(', ', @)}/json.fyi/locations.json>
 
 ```json
 [
