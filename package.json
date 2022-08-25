@@ -1,9 +1,9 @@
 {
-  "name": "json.path.do",
+  "name": "jmes.path.do",
   "module": "worker.js",
   "version": "1.0.0",
-  "description": "Dynamically Transform JSON Objects with JSONPath",
-  "repository": "git@github.com:drivly/json.path.do.git",
+  "description": "Dynamically Transform JSON Objects with JMESPath",
+  "repository": "git@github.com:drivly/jmes.path.do.git",
   "license": "MIT",
   "scripts": {
     "dev": "wrangler dev worker.js",
