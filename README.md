@@ -50,7 +50,7 @@ The authors of all books in the store: `locations[?state == 'WA'].name | sort(@)
 
 Get the name and age of people over the age of 20: `people[?age > '20'].[name, age]`
 
-[https://jmes.path.do/people[?age>`20`].[name,age]/json.fyi/people.json](https://jmes.path.do/people[?age>`20`].[name,age]/json.fyi/people.json)
+[https://jmes.path.do/people[?age>'20'].[name,age]/json.fyi/people.json](https://jmes.path.do/people[?age>`20`].[name,age]/json.fyi/people.json)
 
 ```json
 [
